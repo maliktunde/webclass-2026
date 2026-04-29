@@ -1,3 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    border-left: 3px solid red;
+    padding-left: 1rem;
+}
 body{
     margin:0;
     padding: 0;
@@ -12,7 +19,7 @@ header{
     display: 	flex;
 }
 
-header .title{
+ .title{
     margin:auto 0;
     color: white;
     font-size: 2rem;
@@ -25,15 +32,30 @@ main{
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: lightblue;
 }
 
-section.sect2{
+section.section{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    background-color: lightblue;
     gap: 40px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
+.sect2{
+    background:pink;
+   
+}
+
+.sect3{
+    background:lightsteelblue;
+    width: 100%;
+    color:teal;
+}
+ .right-column  p{
+    color:orange;
+}
 .right-column,.left-column{
     padding:0 2rem;
 }
@@ -41,5 +63,39 @@ section.sect2{
 .right-column div{
     background-color: lightcoral;
     margin: 1rem 0;
+    padding: 1rem 3rem;
+}
+
+.left-column{
+    background-color: purple ;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background: purple url('../images/bg.jpg') no-repeat center bottom cover;
     padding: 1rem;
+}
+
+#aside1{
+    background:black;
+    color:white
+}
+
+[data-title="head-1"]{
+    border-radius:50%;
+    background: pink;
+    color:black;
+    font-weight: bold;
+    width: 50%;
+    padding: 1rem;
+}
+
+div + p {
+    color: violet;
+}
+
+h3,h4,h5,h6{
+    background-color: brown;
+    color:white;
+    font-weight: bolder;
 }
