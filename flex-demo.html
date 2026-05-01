@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox demo</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            background:#67d5;
+            justify-content: stretch;
+            flex-wrap: wrap;
+        }
+        #middle {
+            background: #ddd;
+        }
+        #left, #right {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div id="left" style="background:red;color:white">this is a div</div>
+        <div id="middle"">
+            <h1>this is a heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        </div>
+        <div id="right" style="background:purple;color:white;">this is another div</div>
+        <img src="images/lagos Nigeria.jpg" alt="Lagos Landscape" style="height: 200px; aspect-ratio: 2/1; object-fit: cover; border:1px solid green">
+    </div>
+</body>
+</html>

@@ -41,6 +41,38 @@
             background-color: yellow;
             color:green
         }
+
+        h2:hover::after,h2:hover::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: red;
+            border-radius: 50%;
+            margin-left:5px;
+        }
+        h2::backdrop {
+            background: rgba(0, 255, 0, 1);
+            position: absolute;
+            top:-3px;
+        }
+
+        h2::first-letter {
+            color: white;
+            background-color: hsla(345, 81%, 27%, 0.718);
+            padding: 2px;
+            font-size: 100%;
+        }
+
+        #file::file-selector-button {
+            background-color: #89f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
     </style>
 </head>
 <body>
@@ -48,13 +80,14 @@
         <h1>Welcome to My Web Class 2026</h1>
         <p>This is a simple HTML document template for our web class. Feel free to explore and customize it as you learn more about web development!</p>
 
+        <input type="file" name="" id="file">
         <section>
             <h2>Topics / Demos</h2>
             <ul>
                 <li><a href="layouts.html">CSS Layout</a></li>
                 <li><a href="list-demo.html">List Demo</a></li>
                 <li><a href="table-demo.html">Table Demo</a></li>
-                <li>Responsive Design</li>
+                <li><a href="flex-demo.html">Flex Box Demo</a></li>
         </section>
     </main>
 </body>
