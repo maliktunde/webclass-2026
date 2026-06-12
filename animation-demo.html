@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Demo</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+        .box1 {
+            background-color: blue;
+            animation: move 2s infinite alternate;
+            animation-delay: 2s;
+        }
+
+        .loader{
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            /* border: 2px dotted #34d;     */
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            /* box-shadow: 0 5px 10px #0003; */
+        }
+
+        .bar {
+            width: 10px;
+            height: 50px;
+            position: relative;
+            background-color: #34d;
+            border-radius: 50% 50% 0px 0px;
+        }
+        .bar-1 {
+            animation: bounce 1s infinite;
+        }
+        .bar-2 {
+            animation: bounce 1s infinite;
+            animation-delay: 0.2s;
+        }
+        .bar-3 {
+            animation: bounce 1s infinite;
+            animation-delay: 0.4s;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            background-color: #e7ebff;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px #0003;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            /* transform: rotate(5deg); */
+            filter: blur(2px);
+        }
+
+      
+        
+
+        @keyframes move {
+            0% { left: 0; }
+            100% { left: 200px; }
+        }
+
+        @keyframes move-spin {
+            0% { left: 0; transform: rotate(0deg); border-radius: 0; }
+            50% {transform: rotate(180deg); border-radius: 50%; }
+            75% { left: 100px; transform: rotate(360deg); border-radius: 25%; }
+            100% { left: 200px; transform: rotate(0deg); border-radius: 0; }
+        }
+
+        @keyframes bounce {
+            0% { top: 0; }
+            50% { top: 50px; }
+            100% { top: 0; }
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box box1"></div>
+
+    <div class="loader">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+    </div>
+
+    <!-- Assignment: Create a CSS animation that transforms a shape (e.g., a square to a circle) and apply it to the .shape element. -->
+
+    <div class="shape"></div>
+
+    <div class="card">
+            <h2>Card Title</h2>
+            <p>This is a simple card with some content. It demonstrates the use of CSS pseudo-elements and animations.</p>
+    </div>
+</body>
+</html>
