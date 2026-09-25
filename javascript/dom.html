@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg-color: #eee;
+            --font-color: #292929;
+        }
+
+        html, body {
+            background-color: var(--bg-color);
+            color: var(--font-color);
+        }
+
+        .btn{
+            background-color: var(--font-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        p#output{
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            padding:20px;
+            border: 1px solid var(--font-color);
+            border-radius: 5px;
+            background-color: #765465;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #292929;
+                --font-color: #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to JavaScript DOM</h1>
+    <div>
+        <button class="btn" id="btn-1" onclick="greet()">Say Hi</button>
+        <button class="btn" id="btn-2" onclick="confirmAction()">Confirm action</button>
+        <button class="btn" id="btn-3" onclick="promptAction()">What's Your Name</button>
+    </div>
+    <p id="output"></p>
+
+    <script src="dom.js"></script>
+</body>
+</html>

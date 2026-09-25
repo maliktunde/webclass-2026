@@ -1,0 +1,36 @@
+
+    :root{
+        --bg-color: #eee;
+        --font-color: #292929;
+    }
+
+    html, body {
+        background-color: var(--bg-color);
+        color: var(--font-color);
+    }
+
+    .btn{
+        background-color: var(--font-color);
+        color: var(--bg-color);
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    p#output{
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-top: 20px;
+        padding:20px;
+        border: 1px solid var(--font-color);
+        border-radius: 5px;
+        background-color: #765465;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg-color: #292929;
+            --font-color: #eee;
+        }
+    }

@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Prime Number Checker</title>
+    <style>
+        :root{
+            --bg-color: #eee;
+            --font-color: #292929;
+        }
 
+        html, body {
+            background-color: var(--bg-color);
+            color: var(--font-color);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #292929;
+                --font-color: #eee;
+            }
+        }
+    </style>
+    
+</head>
 <body>
     <h1>JavaScript Loops</h1>
     <h2>The While Loop</h2>
 
     <p id="demo"></p>
 
+    <div id="ntext"></div>
+
     <script>
+        console.log('Script started')
         function isPrime(n) 
         {
             if (n <= 1) return false; // Numbers less than or equal to 1 are not prime
@@ -20,6 +44,28 @@
             }
             return true;
         }
+
+        function add(a, b) {
+            let z = a + b;
+            console.log(`returned directly from the function: ${z}`);
+            return z
+        }
+
+        let n1 = add(10, 20)
+        let n2 = 40
+
+        console.log( "addition: "+add(n1,n2))
+
+        console.log(`Hello, That's a
+         template "literal"! n1: 
+         ${n1}`)
+
+        let newText = `<ol><li>Hello world, 
+            This is a template literal example.</li>
+            <li>Total: ${(n1 * add(5,n2)).toFixed(4)}</li>
+        </ol>`
+
+        document.getElementById("ntext").innerHTML = newText
 
 
         let text = "";
@@ -37,6 +83,8 @@
         }
 
         document.getElementById("demo").innerHTML = text
+        console.log(text)
+        console.log('script ended')
     </script>
 
 </body>

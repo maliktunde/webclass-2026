@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script>document.addEventListener('DOMContentLoaded', displayFruitInfo);</script>
+</head>
+<body>
+    <h1>Welcome to JavaScript Switch</h1>
+    <p>Choose a fruit from the list below:</p>
+    <select id="fruitSelect" onchange="displayFruitInfo()">
+        <option value="">--Select a fruit--</option>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+        <option value="date" selected>Date</option>
+    </select>
+    <p id="output"></p>
+
+    <script src="dom.js" ></script>
+
+</body>
+</html>
