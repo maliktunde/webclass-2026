@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form manipulation with Javascript</title>
+
+    <style>
+        
+
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        fieldset {
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        main,fieldset, input, select {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        fieldset legend {
+            padding: 0 5px;
+            font-weight: bold;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            display: grid;
+            grid-template-columns: 130px 2fr;
+            gap: 10px;
+        }
+
+        .input-group:last-child {
+            margin-bottom: 0;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        input, select{
+            padding: 0.5rem;
+            font-size:18px;
+        }
+
+        .error {
+            border: 1px solid red;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: red;
+            background-color: #ffe6e6;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>Student Form</h1>
+        <p>Fields marked with <span>*</span> are required.</p>
+        <form id="my-form" method="POST">
+            <div class="input-group">
+                <label for="name">Name: <span>*</span></label>
+                <input type="text" id="name" name="first_name">
+            </div>
+            
+            <div class="input-group">
+                <label for="middle-name">Middle name:</label>
+                <input type="text" id="middle-name" name="middle_name">
+            </div>
+            
+            <div class="input-group">
+                <label for="last-name">Last name:  <span>*</span></label>
+                <input type="text" id="last-name" name="last_name">
+            </div>
+            
+            <div class="input-group">
+                <label for="dob">Date of Birth:  <span>*</span></label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <fieldset>
+                <legend>Settings</legend>
+                <div class="input-group">
+                    <label for="fav-color">Favorite Color:</label>
+                    <input type="color" id="fav-color" name="fav_color">
+                </div>
+
+                <div class="input-group">
+                    <label for="error-position">Error Position:</label>
+                    <select id="error-position" name="error_position">
+                        <option value="top">Top</option>
+                        <option value="bottom">Bottom</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="btn-group">
+                <button type="submit">Proceed &rarr;</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+        </form>
+    </main>
+    
+    <script src="form.js"></script>
+</body>
+</html>
